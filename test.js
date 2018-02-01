@@ -1,5 +1,5 @@
-var assert = require('assert')
-var redactor = require('./')
+const assert = require('assert')
+const redactor = require('./')
 
 assert.equal(
   redactor('https://james:password@localhost.com:4345/yeah'),
