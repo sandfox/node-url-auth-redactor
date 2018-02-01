@@ -1,8 +1,12 @@
 var assert = require('assert')
 var redactor = require('./')
 
-var url = 'https://james:password@localhost.com:4345/yeah'
-var expectedRedactedUrl = 'https://james:****@localhost.com:4345/yeah'
-var redactedUrl = redactor(url)
+assert.equal(
+  redactor('https://james:password@localhost.com:4345/yeah'),
+  'https://james:****@localhost.com:4345/yeah'
+)
 
-assert.equal(redactedUrl, expectedRedactedUrl)
+assert.equal(
+  redactor('https://localhost.com:4345/yeah'),
+  'https://localhost.com:4345/yeah'
+)
