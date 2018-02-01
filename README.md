@@ -4,9 +4,9 @@ Redacts the auth:password part of url strings
 
 ## Usage
 
-```
-var redactor = require('url-auth-redactor')
-var url = 'https://user:password@example.com'
+```js
+const redactor = require('url-auth-redactor')
+const url = 'https://user:password@example.com'
 
-var redactedUrl = redactor(url)
+const redactedUrl = redactor(url)
 // 'https://user:****@example.com'
